@@ -16,6 +16,6 @@ public class SceneChange : MonoBehaviour {
 	}
 
 	public void Click () {
-		SceneManager.LoadScene (3);
+		SceneManager.LoadScene (2);
 	}
 }
