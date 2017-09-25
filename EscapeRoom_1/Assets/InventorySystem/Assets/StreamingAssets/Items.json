@@ -1,0 +1,18 @@
+[
+	{
+		"id" : 0,
+		"title" : "Key1",
+		"value" : 0,
+		"stackable" : false,
+		"rarity" : 6,
+		"slug" : "Key1"
+	},
+	{
+		"id" : 1,
+		"title" : "Key2",
+		"value" : 1,
+		"stackable" : true,
+		"rarity" : 6,
+		"slug" : "Key2"
+	}
+]
