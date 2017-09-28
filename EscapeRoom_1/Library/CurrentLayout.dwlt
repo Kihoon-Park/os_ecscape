@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 492}
   m_MaxSize: {x: 16012, y: 14042}
   vertical: 0
-  controlID: 51
+  controlID: 26
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 492}
   m_MaxSize: {x: 12010, y: 14042}
   vertical: 1
-  controlID: 52
+  controlID: 27
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 221}
   m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
-  controlID: 53
+  controlID: 28
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -392,28 +392,29 @@ MonoBehaviour:
     height: 492
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3a360000
-    m_LastClickedID: 13882
-    m_ExpandedIDs: 42d1ffff9ed5ffff62d6ffff84d8ffffb6dfffff4ce0fffff4e0ffffa8e1ffff3ce9ffff9efbffff00000000ea2b00003e2c0000722e0000f036000044370000
+    m_SelectedIDs: a21dffff
+    m_LastClickedID: -57950
+    m_ExpandedIDs: a21dffff2830ffffec3fffff0c41ffff5844ffffd647ffff7e4dfffff652ffff5ea3ffffbca7ffff16aaffff0cacffff02aefffff8afffff10b2ffffa8bcffff5ac0ffff18c1ffff44cfffff5ed1ffff30d3ffffe2d3ffff78d6ffff2adaffff16eeffff54f2ffffe4f2ffff6ef3ffff9efbffff00000000342b0000ea2b00003e2c0000f22e0000322f0000e42f0000083000005c30000080320000843400009e350000483a00006c3b0000e44300008e440000bc4400000845000042690000766f00006e70000002710000e67300004a740000b4890000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: GameStart
+      m_OriginalName: GameStart
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 35186
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
   - scene1
+  - InventoryMain
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -444,14 +445,14 @@ MonoBehaviour:
     width: 353
     height: 492
   m_SceneLighting: 1
-  lastFramingTime: 318.3552598953247
+  lastFramingTime: 6760.620498180389
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 102.600006, y: 59.362495, z: 0}
+    m_Target: {x: 103.3, y: 87.4, z: 0}
     speed: 2
-    m_Value: {x: 102.600006, y: 59.362495, z: 0}
+    m_Value: {x: 103.3, y: 87.4, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -474,13 +475,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.044816203, y: 0.086499035, z: -0.0038947111, w: 0.9952358}
+    m_Target: {x: -0.044816207, y: -0.086499035, z: 0.0038947114, w: -0.99523586}
     speed: 2
     m_Value: {x: -0.044816207, y: -0.086499035, z: 0.0038947114, w: -0.99523586}
   m_Size:
-    m_Target: 488.79395
+    m_Target: 268.60056
     speed: 2
-    m_Value: 488.79395
+    m_Value: 268.60056
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -598,18 +599,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/InventorySystem/Assets/Scene
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/InventorySystem/Assets/Scene
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/jaeshin/os_ecscape/EscapeRoom_1
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d0270000
-    m_LastClickedID: 10192
+    scrollPos: {x: 0, y: 29}
+    m_SelectedIDs: 242a0000
+    m_LastClickedID: 10788
     m_ExpandedIDs: 00000000d02700005028000088280000a4280000aa280000f2290000782a00007a2a0000842a0000be2a0000f62d0000f82d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -638,7 +639,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d02700005028000088280000a4280000aa280000f2290000842a0000be2a0000f62d0000f82d0000
+    m_ExpandedIDs: 00000000d02700005028000088280000a4280000aa280000f2290000782a00007a2a0000842a0000be2a0000f62d0000f82d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -669,18 +670,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000000000000fc270000ba270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: InventoryMain
-      m_OriginalName: InventoryMain
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10292
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
