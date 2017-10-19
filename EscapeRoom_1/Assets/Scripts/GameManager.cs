@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             switch (gameMode)
@@ -43,15 +45,24 @@ public class GameManager : MonoBehaviour
 
     void ChangeMode(GameMode mode)
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         switch (mode)
         {
+
             case GameMode.FPS_MODE:
                 uiCanvas.SetActive(false);
                 fpsController.enabled = true;
+
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 break;
             case GameMode.UI_MODE:
                 uiCanvas.SetActive(true);
                 fpsController.enabled = false;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 break;
             default:
                 break;
@@ -60,3 +71,4 @@ public class GameManager : MonoBehaviour
         gameMode = mode;
     }
 }
+//gle.c
