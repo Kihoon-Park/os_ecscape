@@ -9,16 +9,26 @@ public enum GameMode
     UI_MODE,
 };
 
+public enum InventoryCondition
+{
+    ON,
+    OFF,
+};
+
 public class GameManager : MonoBehaviour
 {
     GameMode gameMode = GameMode.FPS_MODE;
+    InventoryCondition inventoryCondition = InventoryCondition.OFF;
     public GameObject uiCanvas;
+    public GameObject inventoryPanel;
+    public Vector3 inventoryPos;
+    Vector3 inventoryOrgPos;
     public FirstPersonController fpsController;
 
     // Use this for initialization
     void Start()
     {
-
+        inventoryOrgPos = inventoryPanel.transform.position;
     }
 
     // Update is called once per frame
@@ -35,6 +45,20 @@ public class GameManager : MonoBehaviour
                     break;
                 case GameMode.UI_MODE:
                     ChangeMode(GameMode.FPS_MODE);
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            switch (inventoryCondition)
+            {
+                case InventoryCondition.OFF:
+                    ChangeCondition(InventoryCondition.ON);
+                    break;
+                case InventoryCondition.ON:
+                    ChangeCondition(InventoryCondition.OFF);
                     break;
                 default:
                     break;
@@ -69,6 +93,34 @@ public class GameManager : MonoBehaviour
         }
 
         gameMode = mode;
+    }
+
+    void ChangeCondition(InventoryCondition condition)
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        switch (condition)
+        {
+            case InventoryCondition.ON:
+                inventoryPanel.transform.position = inventoryOrgPos + inventoryPos;
+                fpsController.enabled = false;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                break;
+            case InventoryCondition.OFF:
+                inventoryPanel.transform.position = inventoryOrgPos;
+                fpsController.enabled = true;
+
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                break;
+            default:
+                break;
+        }
+
+        inventoryCondition = condition;
     }
 }
 //gle.c
