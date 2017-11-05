@@ -18,7 +18,7 @@ public class Door : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             float end = bOpen ? 90 : 0;
-            Vector3 rot = new Vector3(-90, 0, end);
+            Vector3 rot = new Vector3(-90, 0, -end);
             iTween.RotateTo(gameObject, rot, 1);
 
             bOpen = !bOpen;
