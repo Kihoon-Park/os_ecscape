@@ -3,7 +3,7 @@
 		"id" : 0,
 		"title" : "Key1",
 		"value" : 0,
-		"stackable" : false,
+		"stackable" : true,
 		"rarity" : 6,
 		"slug" : "Key1"
 	},

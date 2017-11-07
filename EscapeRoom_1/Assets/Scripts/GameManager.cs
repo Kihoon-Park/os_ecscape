@@ -34,8 +34,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             switch (gameMode)
@@ -64,6 +62,7 @@ public class GameManager : MonoBehaviour
                     break;
             }
         }
+        
     }
 
 
