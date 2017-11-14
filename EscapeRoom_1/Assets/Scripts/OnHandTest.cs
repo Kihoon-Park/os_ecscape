@@ -18,7 +18,7 @@ public class OnHandTest : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.R))
         {
-            if(Vector3.Distance(transform.position, obj1.transform.position) <= 5)
+            if(Vector3.Distance(transform.position, obj1.transform.position) <= 3.5)
             {
                 if(onHand)
                 {
@@ -27,12 +27,12 @@ public class OnHandTest : MonoBehaviour {
                 else
                 {
                     obj1.transform.parent = transform;
-                    obj1.transform.position = transform.position + transform.forward * 5f;
+                    obj1.transform.position = transform.position + transform.forward * 3f;
                 }
 
                 onHand = !onHand;
             }
-            else if(Vector3.Distance(transform.position, obj2.transform.position) <= 5)
+            else if(Vector3.Distance(transform.position, obj2.transform.position) <= 3.5)
             {
                 if(onHand)
                 {
@@ -41,12 +41,12 @@ public class OnHandTest : MonoBehaviour {
                 else
                 {
                     obj2.transform.parent = transform;
-                    obj2.transform.position = transform.position + transform.forward * 5f;
+                    obj2.transform.position = transform.position + transform.forward * 3f;
                 }
 
                 onHand = !onHand;
             }
-			else if(Vector3.Distance(transform.position, torc.transform.position) <= 5)
+			else if(Vector3.Distance(transform.position, torc.transform.position) <= 3.5)
 			{
 				if(onHand)
 				{
@@ -55,7 +55,7 @@ public class OnHandTest : MonoBehaviour {
 				else
 				{
 					torc.transform.parent = transform;
-					torc.transform.position = transform.position + transform.forward * 5f;
+					torc.transform.position = transform.position + transform.forward * 3f;
 				}
 
 				onHand = !onHand;
