@@ -15,6 +15,7 @@ public enum InventoryCondition
     OFF,
 };
 
+
 public class GameManager : MonoBehaviour
 {
     GameMode gameMode = GameMode.FPS_MODE;
