@@ -28,20 +28,14 @@ public class Inventory : MonoBehaviour
 			slots[i].GetComponent<Slot>().id = i;
 			slots[i].transform.SetParent(slotPanel.transform);
 		}
-	    AddItem(1);
-		AddItem(0);
+	     AddItem(0);
+	     AddItem(1);
+	     AddItem(2);
 	}
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.E))
-		{
-			AddItem(1);
-		}
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			AddItem(0);
-		}
+		
 	}
 
 	public void AddItem(int id)
