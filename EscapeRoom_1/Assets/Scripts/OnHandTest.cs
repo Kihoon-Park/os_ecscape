@@ -92,5 +92,9 @@ public class OnHandTest : MonoBehaviour {
             obj.transform.parent = null;
             onHand = !onHand;
         }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            inv.PutBackItem(0);
+        }
     }
 }

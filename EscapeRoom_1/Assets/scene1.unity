@@ -11689,7 +11689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &657030865
 Light:
   m_ObjectHideFlags: 0
@@ -11751,7 +11751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flight: {fileID: 657030865}
-  on: 1
+  on: 0
 --- !u!1 &661330407
 GameObject:
   m_ObjectHideFlags: 0
