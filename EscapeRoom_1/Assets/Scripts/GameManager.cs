@@ -25,11 +25,13 @@ public class GameManager : MonoBehaviour
     public Vector3 inventoryPos;
     Vector3 inventoryOrgPos;
     public FirstPersonController fpsController;
+    
 
     // Use this for initialization
     void Start()
     {
         inventoryOrgPos = inventoryPanel.transform.position;
+        
     }
 
     // Update is called once per frame
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
                     break;
             }
         }
+
         
     }
 

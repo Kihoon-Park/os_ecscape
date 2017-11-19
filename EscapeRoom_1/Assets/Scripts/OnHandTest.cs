@@ -8,7 +8,7 @@ public class OnHandTest : MonoBehaviour {
     public GameObject torc;
     public GameObject obj;
     private Inventory inv;
-    bool onHand = false;
+    public bool onHand = false;
 
     void Start () 
     {
@@ -66,7 +66,7 @@ public class OnHandTest : MonoBehaviour {
                     else
                     {
                         torc.transform.parent = transform;
-                        torc.transform.position = transform.position + transform.forward * 3f;
+                        torc.transform.position = transform.position + transform.forward * 1f;
                         obj = torc;
                     }
 

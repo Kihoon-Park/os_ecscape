@@ -75,6 +75,11 @@ public class Inventory : MonoBehaviour
 		}
 	}
 
+	public void PutBackItem(int id)
+	{
+		
+	}
+
 	bool CheckIfItemIsInInventory(Item item)
 	{
 		for (int i = 0; i < items.Count; i++)
