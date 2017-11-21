@@ -57,4 +57,5 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 	{
 		tooltip.Deactivate();
 	}
+
 }

@@ -28,20 +28,12 @@ public class Inventory : MonoBehaviour
 			slots[i].GetComponent<Slot>().id = i;
 			slots[i].transform.SetParent(slotPanel.transform);
 		}
-	    AddItem(1);
-		AddItem(0);
+
 	}
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.E))
-		{
-			AddItem(1);
-		}
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			AddItem(0);
-		}
+		
 	}
 
 	public void AddItem(int id)
@@ -71,11 +63,28 @@ public class Inventory : MonoBehaviour
 					itemObj.GetComponent<ItemData>().item = itemToAdd;
 					itemObj.GetComponent<ItemData>().slotId = i;
 					itemObj.transform.SetParent(slots[i].transform);
-					itemObj.transform.position = Vector2.zero;
+					itemObj.transform.position = slots[i].transform.position;
 					itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
 					itemObj.name = "Item: " + itemToAdd.Title;
 					slots[i].name = "Slot: " + itemToAdd.Title;
 					break;
+				}
+			}
+		}
+	}
+
+	public void PutBackItem(int id)
+	{
+		Item itemToPutBack = database.FetchItemById(id);
+		if(CheckIfItemIsInInventory(itemToPutBack))
+		{
+			for(int i = 0 ; i < items.Count ; i++)
+			{
+				if(items[i].Id == id)
+				{
+					ItemData data = slots[i].transform.GetChild(0).GetComponent<ItemData>();
+					data.amount--;
+					data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
 				}
 			}
 		}

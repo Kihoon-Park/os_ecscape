@@ -14,5 +14,13 @@
 		"stackable" : true,
 		"rarity" : 6,
 		"slug" : "Key2"
+	},
+	{
+		"id" : 2,
+		"title" : "Torc",
+		"value" : 2,
+		"stackable" : true,
+		"rarity" : 6,
+		"slug" : "Torc"
 	}
 ]
