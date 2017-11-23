@@ -30,10 +30,10 @@ public class Door : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                onHandTest.obj.SetActive(false);
-                onHandTest.obj.transform.parent = null;
                 if (hit.transform == transform)
                 {
+                    onHandTest.obj.SetActive(false);
+                    onHandTest.obj.transform.parent = null;
                     float end = bOpen ? 90 : 0;
                     Vector3 rot = new Vector3(-90, 0, -end);
                     iTween.RotateTo(door, rot, speed);
