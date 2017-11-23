@@ -95,8 +95,4 @@ public class OnHandTest : MonoBehaviour
             onHand = !onHand;
         }
     }
-    public void IsActive(GameObject gameObj)
-    {
-
-    }
 }
