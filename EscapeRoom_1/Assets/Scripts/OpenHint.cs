@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class OpenHint : MonoBehaviour {
 
-	public GameObject col2;
-	private Flash fla;
+	public GameObject passwordHint;
+	private Flash flash;
 
 	void Start()
 	{
-		fla = GameObject.Find ("/torch/flashlight").GetComponent<Flash> ();
+		flash = GameObject.Find ("/torch/flashlight").GetComponent<Flash> ();
 	}
 
 	void Update()
 	{
-		if (fla.on == false) {
-			col2.SetActive (false);
+		if (flash.isLightOn == false) 
+		{
+			passwordHint.SetActive (false);
 		}
 	}
 
-	void OnTriggerStay(Collider collision) {
-		if (collision.gameObject.CompareTag ("hint1")) {
-			Debug.Log ("test");
-			col2.SetActive (true);
-		} else {
-			col2.SetActive (false);
+	void OnTriggerStay(Collider collision) 
+	{
+		if (collision.gameObject.CompareTag ("hint1")) 
+		{
+			//Debug.Log ("test");
+			passwordHint.SetActive (true);
+		} 
+		else 
+		{
+			passwordHint.SetActive (false);
 		}
 	}
 

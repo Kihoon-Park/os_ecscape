@@ -5,17 +5,17 @@ using UnityEngine;
 public class Flash : MonoBehaviour 
 {
 
-	public Light flight;
-	public Collider ff;
-	public bool on;
+	public Light flashLight;
+	public Collider lightCollider;
+	public bool isLightOn;
 	private OnHand onHand;
 	// Use this for initialization
 	void Start () 
 	{
 		onHand = GameObject.Find ("/FPSController/FirstPersonCharacter").GetComponent<OnHand> ();
-		on = false;
-		flight.enabled = false;
-		ff.enabled = false;
+		isLightOn = false;
+		flashLight.enabled = false;
+		lightCollider.enabled = false;
 	}
 
 	// Update is called once per frame
@@ -23,17 +23,17 @@ public class Flash : MonoBehaviour
 	{
 		if ((Input.GetKeyDown (KeyCode.F))&&(onHand.isOnHand)) 
 		{
-			if (on == true) 
+			if (isLightOn == true) 
 			{
-				flight.enabled = false;
-				on = false;
-				ff.enabled = false;
+				flashLight.enabled = false;
+				isLightOn = false;
+				lightCollider.enabled = false;
 			} 
-			else if (on == false) 
+			else if (isLightOn == false) 
 			{
-				flight.enabled = true;
-				on = true;
-				ff.enabled = true;
+				flashLight.enabled = true;
+				isLightOn = true;
+				lightCollider.enabled = true;
 			}
 		}
 	}
