@@ -126,4 +126,3 @@ public class GameManager : MonoBehaviour
         inventoryCondition = condition;
     }
 }
-//gle.c

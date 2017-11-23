@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnHandTest : MonoBehaviour
+public class OnHand : MonoBehaviour
 {
     public GameObject obj1;
     public GameObject obj2;
@@ -10,7 +10,7 @@ public class OnHandTest : MonoBehaviour
     public GameObject obj;
     public GameObject fps;
     private Inventory inv;
-    public bool onHand = false;
+    public bool isOnHand = false;
 
     void Start () 
     {
@@ -25,7 +25,7 @@ public class OnHandTest : MonoBehaviour
              {
                 if(Vector3.Distance(transform.position, obj1.transform.position) <= 3.5)
                 {
-                    if(onHand)
+                    if(isOnHand)
                     {
                         obj1.transform.parent = null;
                     }
@@ -36,14 +36,14 @@ public class OnHandTest : MonoBehaviour
                         obj = obj1;
                     }
 
-                    onHand = !onHand;
+                    isOnHand = !isOnHand;
                 }
             }
             if(obj2.activeSelf)
             {
                 if(Vector3.Distance(transform.position, obj2.transform.position) <= 3.5)
                 {
-                    if(onHand)
+                    if(isOnHand)
                     {
                         obj2.transform.parent = null;
                     }
@@ -54,14 +54,14 @@ public class OnHandTest : MonoBehaviour
                         obj = obj2;
                     }
 
-                    onHand = !onHand;
+                    isOnHand = !isOnHand;
                 }
             }
             if(torc.activeSelf)
             {
                 if(Vector3.Distance(transform.position, torc.transform.position) <= 3.5)
                 {
-                    if(onHand)
+                    if(isOnHand)
                     {
                         torc.transform.parent = null;
                     }
@@ -72,11 +72,11 @@ public class OnHandTest : MonoBehaviour
                         obj = torc;
                     }
 
-                    onHand = !onHand;
+                    isOnHand = !isOnHand;
                 }
             }
         }
-        if(Input.GetKeyDown(KeyCode.T)&&onHand)
+        if(Input.GetKeyDown(KeyCode.T)&&isOnHand)
         {
             obj.SetActive(false);
             if(obj.tag == "Key1")
@@ -92,7 +92,7 @@ public class OnHandTest : MonoBehaviour
                 inv.AddItem(2);
             }
             obj.transform.parent = null;
-            onHand = !onHand;
+            isOnHand = !isOnHand;
         }
     }
 }

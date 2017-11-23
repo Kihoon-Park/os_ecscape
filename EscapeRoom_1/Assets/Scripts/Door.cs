@@ -9,13 +9,13 @@ public class Door : MonoBehaviour
     public GameObject door;
     public GameObject key1;
     public GameObject keyHole;
-    private OnHandTest onHandTest;
+    private OnHand onHand;
     // Use this for initialization
 
 
     void Start()
     {
-        onHandTest = GameObject.Find("/FPSController/FirstPersonCharacter").GetComponent<OnHandTest>();
+        onHand = GameObject.Find("/FPSController/FirstPersonCharacter").GetComponent<OnHand>();
     }
 
     // Update is called once per frame
@@ -23,17 +23,17 @@ public class Door : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        // Debug.Log(onHandTest.onHand);
+        // Debug.Log(onHand.isOnHand);
         // Debug.Log(Input.GetMouseButtonDown(0));
         // Debug.Log(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1);
-        if ((Input.GetMouseButtonDown(0))&&(onHandTest.onHand == false)&&(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1))
+        if ((Input.GetMouseButtonDown(0))&&(onHand.isOnHand == false)&&(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1))
         {
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
                 if (hit.transform == transform)
                 {
-                    onHandTest.obj.SetActive(false);
-                    onHandTest.obj.transform.parent = null;
+                    onHand.obj.SetActive(false);
+                    onHand.obj.transform.parent = null;
                     float end = bOpen ? 90 : 0;
                     Vector3 rot = new Vector3(-90, 0, -end);
                     iTween.RotateTo(door, rot, speed);

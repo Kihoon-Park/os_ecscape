@@ -11,11 +11,11 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 	private Inventory inv;
 	private Tooltip tooltip;
 	private Vector2 offset;
-	private OnHandTest onHandTest;
+	private OnHand onHand;
 
 	void Start()
 	{
-		onHandTest = GameObject.Find("/FPSController/FirstPersonCharacter").GetComponent<OnHandTest>();
+		onHand = GameObject.Find("/FPSController/FirstPersonCharacter").GetComponent<OnHand>();
 		inv = GameObject.Find("Inventory").GetComponent<Inventory>();
 		tooltip = inv.GetComponent<Tooltip>();
 	}
@@ -62,31 +62,31 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		if(!onHandTest.onHand)
+		if(!onHand.isOnHand)
 		{
 			if(item.Title == "Key1")
 			{
 				inv.PutBackItem(0);
-				onHandTest.obj1.transform.parent = onHandTest.fps.transform;
-				onHandTest.obj1.transform.position = onHandTest.fps.transform.position + onHandTest.fps.transform.forward * 3f;
-				onHandTest.obj1.SetActive(true);
-				onHandTest.onHand = true;
+				onHand.obj1.transform.parent = onHand.fps.transform;
+				onHand.obj1.transform.position = onHand.fps.transform.position + onHand.fps.transform.forward * 3f;
+				onHand.obj1.SetActive(true);
+				onHand.isOnHand = true;
 			}
 			if(item.Title == "Key2")
 			{
 				inv.PutBackItem(1);
-				onHandTest.obj2.transform.parent = onHandTest.fps.transform;
-				onHandTest.obj2.transform.position = onHandTest.fps.transform.position + onHandTest.fps.transform.forward * 3f;
-				onHandTest.obj2.SetActive(true);
-				onHandTest.onHand = true;
+				onHand.obj2.transform.parent = onHand.fps.transform;
+				onHand.obj2.transform.position = onHand.fps.transform.position + onHand.fps.transform.forward * 3f;
+				onHand.obj2.SetActive(true);
+				onHand.isOnHand = true;
 			}
 			if(item.Title == "Torc")
 			{
 				inv.PutBackItem(2);
-				onHandTest.torc.transform.parent = onHandTest.fps.transform;
-				onHandTest.torc.transform.position = onHandTest.fps.transform.position + onHandTest.fps.transform.forward * 1f;
-				onHandTest.torc.SetActive(true);
-				onHandTest.onHand = true;
+				onHand.torc.transform.parent = onHand.fps.transform;
+				onHand.torc.transform.position = onHand.fps.transform.position + onHand.fps.transform.forward * 1f;
+				onHand.torc.SetActive(true);
+				onHand.isOnHand = true;
 			}
 		}
 		tooltip.Deactivate();
