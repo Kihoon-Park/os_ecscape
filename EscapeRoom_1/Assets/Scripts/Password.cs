@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 public class Password : MonoBehaviour
 {
     public Text myText1;
+    // Use this for initialization
+    void Start()
+    {
+        myText1.text = "";
+    }
 
     public void Inputnum(int num)
     {
@@ -41,12 +46,6 @@ public class Password : MonoBehaviour
     {
         if (myText1.text == "4321")
             SceneManager.LoadScene(4);
-    }
-    // Use this for initialization
-    void Start()
-    {
-        myText1.text = "";
-
     }
 
     // Update is called once per frame

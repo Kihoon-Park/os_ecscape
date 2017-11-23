@@ -84,7 +84,7 @@ public class Inventory : MonoBehaviour
 			{
 				if(items[i].Id == id && invenItemSlot.ContainsKey(id))
 				{
-					Destroy(invenItemSlot[i]);
+					Destroy(invenItemSlot[id]);
 					items[i] = new Item();
 				}
 			}

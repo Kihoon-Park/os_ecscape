@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         inventoryOrgPos = inventoryPanel.transform.position;
-        
     }
 
     // Update is called once per frame

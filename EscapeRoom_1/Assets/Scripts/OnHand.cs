@@ -12,68 +12,55 @@ public class OnHand : MonoBehaviour
     private Inventory inv;
     public bool isOnHand = false;
 
-    void Start () 
+    void Start ()
     {
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
     }
-
     void Update ()
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-             if(obj1.activeSelf)
-             {
-                if(Vector3.Distance(transform.position, obj1.transform.position) <= 3.5)
-                {
-                    if(isOnHand)
-                    {
-                        obj1.transform.parent = null;
-                    }
-                    else
-                    {
-                        obj1.transform.parent = transform;
-                        obj1.transform.position = transform.position + transform.forward * 3f;
-                        obj = obj1;
-                    }
-
-                    isOnHand = !isOnHand;
-                }
-            }
-            if(obj2.activeSelf)
+            if((Vector3.Distance(transform.position, obj1.transform.position) <= 3.5) && (obj1.activeSelf))
             {
-                if(Vector3.Distance(transform.position, obj2.transform.position) <= 3.5)
+                if(isOnHand)
                 {
-                    if(isOnHand)
-                    {
-                        obj2.transform.parent = null;
-                    }
-                    else
-                    {
-                        obj2.transform.parent = transform;
-                        obj2.transform.position = transform.position + transform.forward * 3f;
-                        obj = obj2;
-                    }
-
-                    isOnHand = !isOnHand;
+                    obj1.transform.parent = null;
                 }
+                else
+                {
+                    obj1.transform.parent = transform;
+                    obj1.transform.position = transform.position + transform.forward * 3f;
+                    obj = obj1;
+                }
+                isOnHand = !isOnHand;
             }
-            if(torc.activeSelf)
+            else if((Vector3.Distance(transform.position, obj2.transform.position) <= 3.5) && (obj.activeSelf))
             {
-                if(Vector3.Distance(transform.position, torc.transform.position) <= 3.5)
+                if(isOnHand)
                 {
-                    if(isOnHand)
-                    {
-                        torc.transform.parent = null;
-                    }
-                    else
-                    {
-                        torc.transform.parent = transform;
-                        torc.transform.position = transform.position + transform.forward * 1f;
-                        obj = torc;
-                    }
-
-                    isOnHand = !isOnHand;
+                    obj2.transform.parent = null;
                 }
+                else
+                {
+                    obj2.transform.parent = transform;
+                    obj2.transform.position = transform.position + transform.forward * 3f;
+                    obj = obj2;
+                }
+                isOnHand = !isOnHand;
+            }
+            else if((Vector3.Distance(transform.position, torc.transform.position) <= 3.5) && (torc.activeSelf))
+            {
+                if(isOnHand)
+                {
+                    torc.transform.parent = null;
+                }
+                else
+                {
+                    torc.transform.parent = transform;
+                    torc.transform.position = transform.position + transform.forward * 1f;
+                    obj = torc;
+                }
+                isOnHand = !isOnHand;
             }
         }
         if(Input.GetKeyDown(KeyCode.T)&&isOnHand)

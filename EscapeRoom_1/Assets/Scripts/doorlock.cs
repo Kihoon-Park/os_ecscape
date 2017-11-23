@@ -6,10 +6,10 @@ public class doorlock : MonoBehaviour {
     public GameObject passwordPanel;
 
 
-
     // Use this for initialization
-    void Start () {
-		
+    void Start () 
+    {
+
 	}
 
     // Update is called once per frame
@@ -30,4 +30,5 @@ public class doorlock : MonoBehaviour {
             }
         }
     }
+    
 }
