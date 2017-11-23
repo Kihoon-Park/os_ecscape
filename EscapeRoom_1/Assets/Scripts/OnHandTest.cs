@@ -21,7 +21,7 @@ public class OnHandTest : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-             if(obj1 != null)
+             if(obj1.activeSelf)
              {
                 if(Vector3.Distance(transform.position, obj1.transform.position) <= 3.5)
                 {
@@ -39,7 +39,7 @@ public class OnHandTest : MonoBehaviour
                     onHand = !onHand;
                 }
             }
-            if(obj2 != null)
+            if(obj2.activeSelf)
             {
                 if(Vector3.Distance(transform.position, obj2.transform.position) <= 3.5)
                 {
@@ -57,7 +57,7 @@ public class OnHandTest : MonoBehaviour
                     onHand = !onHand;
                 }
             }
-            if(torc != null)
+            if(torc.activeSelf)
             {
                 if(Vector3.Distance(transform.position, torc.transform.position) <= 3.5)
                 {
@@ -95,5 +95,8 @@ public class OnHandTest : MonoBehaviour
             onHand = !onHand;
         }
     }
-    
+    public void IsActive(GameObject gameObj)
+    {
+
+    }
 }

@@ -28,7 +28,6 @@ public class Door : MonoBehaviour
         // Debug.Log(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1);
         if ((Input.GetMouseButtonDown(0))&&(onHandTest.onHand == false)&&(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1))
         {
-
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
                 onHandTest.obj.SetActive(false);
