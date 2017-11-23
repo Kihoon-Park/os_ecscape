@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnHandTest : MonoBehaviour {
+public class OnHandTest : MonoBehaviour
+{
     public GameObject obj1;
     public GameObject obj2;
     public GameObject torc;
     public GameObject obj;
+    public GameObject fps;
     private Inventory inv;
     public bool onHand = false;
 
@@ -92,9 +94,6 @@ public class OnHandTest : MonoBehaviour {
             obj.transform.parent = null;
             onHand = !onHand;
         }
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            inv.PutBackItem(0);
-        }
     }
+    
 }

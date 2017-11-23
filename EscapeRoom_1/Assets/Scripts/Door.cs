@@ -32,6 +32,7 @@ public class Door : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
                 onHandTest.obj.SetActive(false);
+                onHandTest.obj.transform.parent = null;
                 if (hit.transform == transform)
                 {
                     float end = bOpen ? 90 : 0;

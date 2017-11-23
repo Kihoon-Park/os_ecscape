@@ -2963,7 +2963,7 @@ GameObject:
   - component: {fileID: 150126378}
   m_Layer: 0
   m_Name: Key2
-  m_TagString: Key1
+  m_TagString: Key2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9671,6 +9671,7 @@ MonoBehaviour:
   obj2: {fileID: 150126377}
   torc: {fileID: 111416273}
   obj: {fileID: 0}
+  fps: {fileID: 567114902}
   onHand: 0
 --- !u!1 &567464190
 GameObject:
@@ -18428,7 +18429,7 @@ GameObject:
   - component: {fileID: 1051402197}
   m_Layer: 0
   m_Name: Key1
-  m_TagString: Key2
+  m_TagString: Key1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
