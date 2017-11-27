@@ -23,9 +23,9 @@ public class Door : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        // Debug.Log(onHand.isOnHand);
-        // Debug.Log(Input.GetMouseButtonDown(0));
-        // Debug.Log(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1);
+        //Debug.Log(onHand.isOnHand);
+        //Debug.Log(Input.GetMouseButtonDown(0));
+        //Debug.Log(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1);
         if ((Input.GetMouseButtonDown(0))&&(onHand.isOnHand == false)&&(Vector3.Distance(keyHole.transform.position, key1.transform.position) <= 1))
         {
             if (Physics.Raycast(ray, out hit, 100.0f))
