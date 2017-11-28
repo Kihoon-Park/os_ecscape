@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     public Vector3 inventoryPos;
     Vector3 inventoryOrgPos;
     public FirstPersonController fpsController;
-    
 
     // Use this for initialization
     void Start()
@@ -63,9 +62,7 @@ public class GameManager : MonoBehaviour
                 default:
                     break;
             }
-        }
-
-        
+        }       
     }
 
 
@@ -75,18 +72,15 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         switch (mode)
         {
-
             case GameMode.FPS_MODE:
                 uiCanvas.SetActive(false);
                 fpsController.enabled = true;
-
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 break;
             case GameMode.UI_MODE:
                 uiCanvas.SetActive(true);
                 fpsController.enabled = false;
-
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 break;

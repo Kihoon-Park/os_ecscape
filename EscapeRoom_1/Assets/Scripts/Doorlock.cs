@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Doorlock : MonoBehaviour
 {
     public GameObject passwordPanel;
     public Text passwordText;
-
+    private GameManager gameManager;
     // Use this for initialization
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         passwordText.text = "";
     }
 
@@ -49,6 +51,15 @@ public class Doorlock : MonoBehaviour
         if (passwordText.text == "4321")
             SceneManager.LoadScene(4);
     }
+
+    public void ExitPasswordPanel()
+    {
+        passwordPanel.SetActive(false);
+        gameManager.fpsController.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -63,6 +74,9 @@ public class Doorlock : MonoBehaviour
                 {
                     Debug.Log(hit.transform.gameObject.name);
                     passwordPanel.SetActive(true);
+                    gameManager.fpsController.enabled = false;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
         }
