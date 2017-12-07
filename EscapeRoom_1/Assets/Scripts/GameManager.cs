@@ -68,8 +68,6 @@ public class GameManager : MonoBehaviour
 
     void ChangeMode(GameMode mode)
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         switch (mode)
         {
             case GameMode.FPS_MODE:

@@ -24,11 +24,12 @@ public class OpenHint : MonoBehaviour {
 	{
 		if (collision.gameObject.CompareTag ("hint1")) 
 		{
-			//Debug.Log ("test");
+			Debug.Log ("crash");
 			passwordHint.SetActive (true);
 		} 
 		else 
 		{
+			Debug.Log ("no");
 			passwordHint.SetActive (false);
 		}
 	}

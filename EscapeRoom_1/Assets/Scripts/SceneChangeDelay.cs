@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneWaitForSeconds : MonoBehaviour {
-	public float delayTime = 3;
+public class SceneChangeDelay : MonoBehaviour {
+	private float delayTime = 3;
 
 	// Use this for initialization
 	IEnumerator Start () {

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scene/StartingMenu.unity
     guid: 4b028fb9f9f544f22abe5df4496a16d5
   - enabled: 1
-    path: Assets/Scene/scene1.unity
+    path: Assets/Scene/InGame.unity
     guid: d060aabe1311bc54195d3decc2b13fc0
   - enabled: 1
     path: Assets/InventorySystem/Assets/Scene/InventoryMain.unity

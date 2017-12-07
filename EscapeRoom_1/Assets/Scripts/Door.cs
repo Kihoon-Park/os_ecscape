@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    bool bOpen = false;
-    public float speed;
+
+    float speed = 5;
     public GameObject door;
     public GameObject key1;
     public GameObject keyHole;
@@ -34,11 +34,9 @@ public class Door : MonoBehaviour
                 {
                     onHand.obj.SetActive(false);
                     onHand.obj.transform.parent = null;
-                    float end = bOpen ? 90 : 0;
-                    Vector3 rot = new Vector3(-90, 0, -end);
+                    Vector3 rot = new Vector3(-90, 0, -90);
                     iTween.RotateTo(door, rot, speed);
 
-                    bOpen = !bOpen;
                 }
             }
         }

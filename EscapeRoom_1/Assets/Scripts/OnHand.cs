@@ -24,7 +24,7 @@ public class OnHand : MonoBehaviour
             {
                 if(isOnHand)
                 {
-                    obj1.transform.parent = null;
+                    obj.transform.parent = null;
                 }
                 else
                 {
@@ -34,11 +34,11 @@ public class OnHand : MonoBehaviour
                 }
                 isOnHand = !isOnHand;
             }
-            else if((Vector3.Distance(transform.position, obj2.transform.position) <= 3.5) && (obj.activeSelf))
+            else if((Vector3.Distance(transform.position, obj2.transform.position) <= 3.5) && (obj2.activeSelf))
             {
                 if(isOnHand)
                 {
-                    obj2.transform.parent = null;
+                    obj.transform.parent = null;
                 }
                 else
                 {
@@ -52,7 +52,7 @@ public class OnHand : MonoBehaviour
             {
                 if(isOnHand)
                 {
-                    torc.transform.parent = null;
+                    obj.transform.parent = null;
                 }
                 else
                 {
